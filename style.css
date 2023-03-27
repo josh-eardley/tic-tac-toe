@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vh;
+    height: 90vh;
+    float: right;
+    margin: 25px;
+}
+
+.cell {
+    border: solid black 2px;
+    width: 30vh;
+    height: 30vh;
+    align-items: center;
+}
