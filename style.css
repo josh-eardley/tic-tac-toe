@@ -1,9 +1,31 @@
 * {
     box-sizing: border-box;
+
 }
 
-main {
-    display: flex;
+#title {
+    display: inline-flex;
+    margin-left: 50px;
+    margin-right: 150px;
+}
+
+#gameSetup {
+    display: inline-flex;
+    flex-direction: column;
+    width: 40vh;
+}
+
+input {
+    margin-bottom: 10px;
+    height: 30px;
+}
+button {
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+#board {
+    display: inline-flex;
     flex-wrap: wrap;
     width: 90vh;
     height: 90vh;
@@ -11,9 +33,21 @@ main {
     margin: 25px;
 }
 
-.cell {
+.cell9 {
     border: solid black 2px;
     width: 30vh;
     height: 30vh;
-    align-items: center;
 }
+
+.cell16 {
+    border: solid black 2px;
+    width: 22.5vh;
+    height: 22.5vh;
+}
+
+.cell25 {
+    border: solid black 2px;
+    width: 18vh;
+    height: 18vh;
+}
+
