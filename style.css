@@ -31,12 +31,15 @@ button {
     height: 90vh;
     float: right;
     margin: 25px;
+    
 }
 
 .cell9 {
     border: solid black 2px;
     width: 30vh;
     height: 30vh;
+    color: black;
+    font-size: 2em;
 }
 
 .cell16 {
