@@ -2,10 +2,10 @@
 const state = {};
 
 function resetState() {
-    state.board = []
+    state.board = [{value: ""},{value: ""},{value: ""},{value: ""},{value: ""},{value: ""},{value: ""},{value: ""},{value: ""}]
     // state.players = [`${playerOne.innerText}`, `${playerTwo.innerText}`];
     state.players = ["", ""];
-    state.size = 0
+    state.size = 9
     state.playerIndex = 0
   };
 resetState();
@@ -14,12 +14,6 @@ resetState();
 let body = document.querySelector("body");
 const board = document.createElement('main');
 board.id = 'board';
-
-// board size defaults to 9 when the page is first loaded
-state.size = 9;
-initialBoardRender()
-/* without the size hard coded in, the page renders with nothing on the right side
-until one of the buttons is pressed */
 
 const titleH1 = document.createElement('h1');
 titleH1.id = 'title';
@@ -64,6 +58,7 @@ function clearBoard(parent) {
 }
 
 function initialBoardRender() {
+    clearBoard(board)
     for (let i = 0; i <state.size; i++) {
         state.board[i] = {value: ""};
         const div = document.createElement('div');
@@ -77,8 +72,8 @@ function initialBoardRender() {
 function renderBoard() {
     clearBoard(board);
     for (let i = 0; i < state.size; i++) {
-        // state.board[i] = {value: ""};
         const div = document.createElement('div');
+        div.innerText = state.board[i].value;
         div.className = `cell${state.size}`;
         div.id = i;
         board.appendChild(div)
@@ -87,21 +82,14 @@ function renderBoard() {
 }    
 
 function takeTurns(cellIndex) {
-    const selected = document.getElementById(cellIndex);
-    console.log(state.playerIndex);
-    console.log(selected);
-    if (state.playerIndex === 0) {
+    // const selected = document.getElementById(cellIndex);
+    if (state.playerIndex === 0 && state.board[cellIndex].value === "") {
         state.board[cellIndex].value = "X";
-        selected.innerText = "X";
         state.playerIndex++;
-        console.log("Is this working?");
-    } else if (state.playerIndex === 1){
+    } else if (state.playerIndex === 1 && state.board[cellIndex].value === ""){
         state.board[cellIndex].value = "O";
-        selected.innerText = "O";
         state.playerIndex--;
-        console.log("Is this working? 2");
     }
-    console.log(state.board[cellIndex]);
 }
 
 
@@ -234,7 +222,6 @@ buttonFive.addEventListener("click", function() {
 })
 
 board.addEventListener("click", function(event) {
-    console.log("is this gonna work? 3")
     let cellIndex = event.target.id;
     takeTurns(cellIndex);
     renderBoard();

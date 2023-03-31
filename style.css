@@ -31,26 +31,28 @@ button {
     height: 90vh;
     float: right;
     margin: 25px;
-    
+    color: black;
+    font-size: 8em
 }
 
 .cell9 {
     border: solid black 2px;
     width: 30vh;
     height: 30vh;
-    color: black;
-    font-size: 2em;
+    text-align: center;
 }
 
 .cell16 {
     border: solid black 2px;
     width: 22.5vh;
     height: 22.5vh;
+    text-align: center;
 }
 
 .cell25 {
     border: solid black 2px;
     width: 18vh;
     height: 18vh;
+    text-align: center;
 }
 
