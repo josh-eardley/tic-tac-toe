@@ -12,7 +12,7 @@
 #gameSetup {
     display: inline-flex;
     flex-direction: column;
-    width: 40vh;
+    width: 40vh;;
 }
 
 input {
@@ -24,6 +24,13 @@ button {
     height: 30px;
 }
 
+#playerMessage {
+    display: flex;
+    flex-wrap: wrap;
+    border: black, solid, 2px;
+
+}
+
 #board {
     display: inline-flex;
     flex-wrap: wrap;
@@ -32,7 +39,7 @@ button {
     float: right;
     margin: 25px;
     color: black;
-    font-size: 8em
+    font-size: 5em
 }
 
 .cell9 {
