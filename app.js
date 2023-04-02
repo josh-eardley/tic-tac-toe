@@ -250,9 +250,20 @@ board.addEventListener("click", function(event) {
         takeTurns(cellIndex);
         // computerMoves(computerCellIndex);
         renderBoard();
-        if (checkWinner()) {
-            
-        } 
+        // if (checkWinner()) {
+        //     board.removeEventListener("click", function() {
+        //         if (playerOne.value === "" || playerTwo.value === "") {
+        //             playerMessage.innerText = "Make sure to enter your name at the top of the screen before starting your game.";
+        //             clearBoard();
+        //         } else {
+        //             playerMessage.innerText = ""
+        //             let cellIndex = event.target.id;
+        //             checkWinner();
+        //             takeTurns(cellIndex);
+        //             renderBoard();
+        //         }
+        //     })
+        // } 
     }
 })
 
